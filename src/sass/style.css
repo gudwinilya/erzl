@@ -1,0 +1,478 @@
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 400;
+  src: url("../fonts/SourceSansPro-Regular.woff") format("woff");
+  font-style: normals;
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 600;
+  src: url("../fonts/SourceSansPro-Semibold.woff") format("woff");
+  font-style: normals;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "SourceSansPro";
+}
+
+button, a {
+  cursor: pointer;
+}
+
+.header {
+  padding: 16px 24px;
+  background-color: #7164b9;
+}
+
+.header-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-body .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-body .header-container .burger-menu {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-body .header-container .burger-menu span {
+  width: 18px;
+  height: 2px;
+  background-color: white;
+}
+
+.header-body .header-container .burger-menu::before {
+  width: 18px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  content: " ";
+  top: 5px;
+  left: 3px;
+}
+
+.header-body .header-container .burger-menu::after {
+  width: 18px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  content: " ";
+  bottom: 5px;
+  left: 3px;
+}
+
+.header-body .header-container .page-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: white;
+  margin-left: 24px;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.navbar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 240px;
+          flex: 0 0 240px;
+}
+
+.navbar-body {
+  padding-top: 8px;
+  height: 100%;
+  border-right: 1px solid #DDE6E9;
+}
+
+.navbar-body .navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.navbar-body .navbar__list > :last-child {
+  margin-top: auto;
+  border-top: 1px solid #DDE6E9;
+}
+
+.navbar-body .navbar__list-item .list-item__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.navbar-body .navbar__list-item .list-item__link-img {
+  margin: 8px 24px;
+}
+
+.navbar-body .navbar__list-item .list-item__link .link-icon path {
+  fill: black;
+  fill-opacity: 0.5;
+}
+
+.navbar-body .navbar__list-item .list-item__link:hover {
+  background-color: rgba(221, 230, 233, 0.5);
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.navbar-body .navbar__list-item .list-item__link:hover .link-icon path {
+  fill-opacity: 0.6;
+}
+
+.navbar-body .navbar__list-item .active, .navbar-body .navbar__list-item .active:hover {
+  background-color: rgba(113, 100, 185, 0.15);
+  color: #7164b9;
+}
+
+.navbar-body .navbar__list-item .active:hover .link-icon path {
+  fill-opacity: 1;
+}
+
+.navbar-body .navbar__list-item .active .link-icon path {
+  fill: #7164b9;
+  fill-opacity: 1;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background-color: #f5f7fa;
+  padding: 16px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .search-results {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-bottom: auto;
+  padding: 16px;
+  margin-right: 24px;
+  background-color: white;
+  border: 1px solid #CFDBE2;
+  -webkit-box-shadow: inset 0px 3px 0px #CFDBE2;
+          box-shadow: inset 0px 3px 0px #CFDBE2;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .search-results__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 35px;
+}
+
+.main .search-results__subtitle {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 33px;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.main .search-results__description {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.main .search-results .button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 40px;
+}
+
+.main .search-results .button__send-note {
+  background-color: #7164b9;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.main .search-results .button__send-note:hover {
+  background-color: #5c4dac;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.main .search-options {
+  padding: 16px;
+  margin-bottom: auto;
+  background-color: #f5f7fa;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 280px;
+          flex: 0 0 280px;
+  background-color: white;
+  border: 1px solid #CFDBE2;
+  -webkit-box-shadow: inset 0px 3px 0px #CFDBE2;
+          box-shadow: inset 0px 3px 0px #CFDBE2;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .search-options__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 14px;
+}
+
+.main .search-options .user-details .input-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dde6e9;
+  border-radius: 4px;
+}
+
+.main .search-options .user-details .input-box:not(:first-child) {
+  margin-top: 10px;
+}
+
+.main .search-options .user-details .input-box:hover {
+  cursor: text;
+}
+
+.main .search-options .user-details .input-box label {
+  position: absolute;
+  display: block;
+  top: 9px;
+  left: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.main .search-options .user-details .input-box label:hover {
+  cursor: text;
+}
+
+.main .search-options .user-details .input-box input, .main .search-options .user-details .input-box select {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  padding-left: 8px;
+}
+
+.main .search-options .user-details .input-box input:focus, .main .search-options .user-details .input-box input:not(:placeholder-shown), .main .search-options .user-details .input-box select:focus, .main .search-options .user-details .input-box select:not(:placeholder-shown) {
+  outline: 0;
+  outline-offset: 0;
+  background-color: white;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.main .search-options .user-details .input-box input:focus ~ label, .main .search-options .user-details .input-box input:not(:placeholder-shown) ~ label, .main .search-options .user-details .input-box select:focus ~ label, .main .search-options .user-details .input-box select:not(:placeholder-shown) ~ label {
+  padding: 0 2px;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: white;
+  top: -7px;
+  left: 6px;
+  font-size: 12px;
+  line-height: 12px;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+.main .search-options .user-details .input-box #birthdate {
+  font-family: "SourceSansPro";
+  -webkit-appearance: none;
+  position: relative;
+}
+
+.main .search-options .user-details .input-box #birthdate::-webkit-datetime-edit {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: transparent;
+}
+
+.main .search-options .user-details .input-box #birthdate::-webkit-calendar-picker-indicator {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 100px 0 0 100px;
+  cursor: pointer;
+  background: transparent;
+  background-color: rgba(113, 100, 185, 0.15);
+  z-index: 2;
+}
+
+.main .search-options .user-details .input-box #birthdate::-webkit-calendar-picker-indicator:hover {
+  border-radius: 100px 0 0 100px;
+  width: 60px;
+  background-color: rgba(113, 100, 185, 0.3);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.main .search-options .user-details .input-box #birthdate::after {
+  content: " ";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/navbar_icons/Menu/Menu/outline-event.svg");
+  background-repeat: no-repeat;
+  top: 6px;
+  right: 8px;
+  z-index: 0;
+}
+
+.main .search-options .user-details .form-subtitle {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 24px 0 16px 0;
+}
+
+.main .search-options .user-details .select-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dde6e9;
+  border-radius: 4px;
+}
+
+.main .search-options .user-details .select-box select {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.main .search-options .user-details .select-box select::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+}
+
+.main .search-options .user-details .select-box select:focus {
+  outline: 0;
+}
+
+.main .search-options .user-details .select-box label {
+  position: absolute;
+  padding: 0 2px;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: white;
+  top: -7px;
+  left: 6px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+.navbar
+    flex: 0 0 240px
+    &-body
+        padding-top: 8px
+        height: 100%
+        border-right: 1px solid #DDE6E9
+        .navbar__list
+            display: flex
+            flex-direction: column
+            height: 100%
+            > :last-child
+                margin-top: auto
+                border-top: 1px solid #DDE6E9
+            &-item
+                .list-item__link
+                    display: flex
+                    align-items: center
+                    width: 100%
+                    &-img
+                        margin: 8px 24px
+                    .link-icon
+                        path
+                            fill: black
+                            fill-opacity: 0.5
+                    &:hover
+                        background-color: hsla(195, 21%, 89%, .5)
+                        color: hsla(0, 0%, 0%, 0.8);
+                        .link-icon
+                            path
+                                fill-opacity: 0.6
+                        transition-duration: 0.3s
+                .active
+                    background-color: hsla(249, 38%, 56%, 0.15)
+                    color: $main_color
+                    &:hover
+                        @extend .active
+                        .link-icon
+                            path
+                                fill-opacity: 1
+                    .link-icon
+                        path
+                            fill: $main_color
+                            fill-opacity: 1

@@ -1,0 +1,9 @@
+// подключение шрифтов
+$font-face: 'Regular' $sourcesanspro 400, 'Semibold' $sourcesanspro 600
+
+@each $name, $ff, $fw in $font-face
+    @font-face
+        font-family: $ff
+        font-weight: $fw
+        src: url('../fonts/#{$ff}-#{$name}.woff') format('woff')
+        font-style: normals

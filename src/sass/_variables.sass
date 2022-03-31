@@ -1,0 +1,32 @@
+// font-family
+$sourcesanspro: "SourceSansPro"
+
+// main-colors
+$main_color: hsla(249, 38%, 56%, 1)
+$white: hsla(0, 0%, 100%, 1)
+$bg: hsla(216, 33%, 97%, 1)
+$border_color: hsla(195, 21%, 89%, 1)
+
+// mixins
+@mixin button-fill()
+    background-color: $main_color
+    color: $white
+    padding: 8px 16px
+    border-radius: 4px
+    text-align: center
+    &:hover
+        background-color: hsla(249, 38%, 49%, 1)
+        transition-duration: 0.3s
+
+@mixin button-outline()
+    background-color: $white
+    color: $main_color
+    padding: 8px 16px
+    border-radius: 4px
+    text-align: center
+
+@mixin title()
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: hsla(0, 0%, 0%, 0.9);
