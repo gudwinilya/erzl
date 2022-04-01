@@ -1,13 +1,15 @@
 .main
     flex: 1 1 auto
+    width: 100%
+    height: 100%
     background-color: $bg
-    padding: 16px 24px
+    padding: 16px 24px 8px 24px
     display: flex
     .search-results
         flex: 1 1 auto
-        margin-bottom: auto
+        width: 100%
+        // margin-bottom: auto
         padding: 16px
-        margin-right: 24px
         background-color: $white
         border: 1px solid #CFDBE2
         box-shadow: inset 0px 3px 0px #CFDBE2
@@ -35,9 +37,10 @@
                 @include button-fill
     .search-options
         padding: 16px
-        margin-bottom: auto
+        flex: 0 0 auto
+        // margin-bottom: auto
         background-color: $bg
-        flex: 0 0 280px
+        width: 280px
         background-color: $white
         border: 1px solid #CFDBE2
         box-shadow: inset 0px 3px 0px #CFDBE2
@@ -48,6 +51,8 @@
             @include title
             margin-bottom: 14px
         .user-details
+            display: flex
+            flex-wrap: wrap
             .input-box
                 position: relative
                 width: 100%
@@ -58,7 +63,6 @@
                     margin-top: 10px      
                 &:hover
                     cursor: text
-                &:focus
                 label
                     position: absolute
                     display: block
@@ -70,12 +74,12 @@
                     &:hover
                         cursor: text
                 input, select
-                    
                     width: 100%
                     height: 100%
                     font-size: 14px
                     color: rgba(0, 0, 0, 0.87);
                     padding-left: 8px
+                    border-radius: 4px
                     &:focus, &:not(:placeholder-shown)
                         outline: 0;
                         outline-offset: 0;
@@ -124,10 +128,17 @@
                         top: 6px
                         right: 8px
                         z-index: 0
+            .passport-box
+                margin-top: 8px
+                display: flex
+                .input-box
+                    margin: 0
+                    &:first-child
+                        margin-right: 8px
             .form-subtitle
                 font-weight: 600
                 color: rgba(0, 0, 0, 0.9)
-                margin: 24px 0 16px 0
+                margin: 16px 0 12px 0
             .select-box
                 position: relative
                 width: 100%
@@ -150,9 +161,6 @@
                         width: 10px;
                         height: 10px;
                         background-color: black
-                        // border-style: solid;
-                        // border-width: 5px 5px 0 5px;
-                        // border-color: #000000 transparent transparent transparent;
                     &:focus
                         outline: 0
                 label
@@ -164,6 +172,54 @@
                     left: 6px
                     font-size: 12px
                     line-height: 12px
+            .policy-box
+                width: 100%
+                display: flex
+                .input-box
+                    margin: 0
+                    &:first-child
+                        margin-right: 8px
+            .button-box
+                margin-top: 14px
+                padding-top: 16px
+                position: relative
+                display: flex
+                width: 100%
+                &::before
+                    position: absolute
+                    content: " "
+                    height: 1px
+                    width: 280px
+                    background-color: $border_color
+                    top: 0
+                    left: -16PX
+                .button-submit
+                    width: 50%
+                    &:first-child
+                        margin-right: 8px
+                    input
+                        width: 100%
+                        height: 40px
+                        border-radius: 4px
+                        cursor: pointer
+                    .input-item__submit
+                        @include button-fill
+                    .input-item__reset
+                        @include button-outline
+.search-options__box
+    flex: 0 0 auto
+    width: 280px
+    overflow: scroll
+    overflow-x: hidden
+.search-results__box
+    overflow: scroll
+    overflow-x: hidden
+    margin-right: 24px
+    width: 100%
+
+
+                    
+                        
 
 
 

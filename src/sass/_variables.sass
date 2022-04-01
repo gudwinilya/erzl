@@ -14,16 +14,21 @@ $border_color: hsla(195, 21%, 89%, 1)
     padding: 8px 16px
     border-radius: 4px
     text-align: center
+    transition-duration: 0.3s
     &:hover
         background-color: hsla(249, 38%, 49%, 1)
-        transition-duration: 0.3s
+        
 
 @mixin button-outline()
     background-color: $white
     color: $main_color
+    border: 1px solid $border_color
     padding: 8px 16px
     border-radius: 4px
     text-align: center
+    &:hover
+        background-color: hsla(195, 21%, 89%, 0.3)
+        transition-duration: 0.3s
 
 @mixin title()
     font-weight: 600;
